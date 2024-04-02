@@ -7,7 +7,7 @@
                         <div class="about-l">
                             <ul class="about-link">
                                 <li class="go-home"><a href="index1.html">Home</a></li>
-                                <li class="about-p"><span>Profile</span></li>
+                                <li class="about-p"><span>Address</span></li>
                             </ul>
                         </div>
                     </div>
@@ -35,52 +35,66 @@
                             <div class="order-his-page">
                                 <ul class="profile-ul">
                                     <li class="profile-li"><a href="order-history.html"><span>Orders</span> <span class="pro-count">5</span></a></li>
-                                    <li class="profile-li"><a href="profile.html" class="active">Profile</a></li>
-                                    <li class="profile-li"><a href="<?= base_url('pro-address') ?>">Address</a></li>
-                                    <li class="profile-li"><a href="<?= base_url('wishlist') ?>"><span>Wishlist</span> <span class="pro-count">3</span></a></li>
+                                    <li class="profile-li"><a href="profile.html">Profile</a></li>
+                                    <li class="profile-li"><a href="pro-addresses.html" class="active">Address</a></li>
+                                    <li class="profile-li"><a href="pro-wishlist.html"><span>Wishlist</span> <span class="pro-count">3</span></a></li>
                                     <li class="profile-li"><a href="pro-tickets.html"><span>My tickets</span> <span class="pro-count">4</span></a></li>
                                 </ul>
                             </div>
                         </div>
-                        <div class="profile-form">
+                        <div class="profile-address">
                             <form>
-                                <ul class="pro-input-label">
+                                <div class="pro-add-title">
+                                    <h4>Contact address</h4>
+                                </div>
+                                <ul class="add-label-input">
                                     <li>
-                                        <label>First name</label>
-                                        <input type="text" name="name" placeholder="First name">
+                                        <label>Company</label>
+                                        <input type="text" name="name" placeholder="Company">
                                     </li>
                                     <li>
-                                        <label>Last name</label>
-                                        <input type="text" name="name" placeholder="Last name">
+                                        <label>Country</label>
+                                        <select>
+                                            <option>United states</option>
+                                            <option>India</option>
+                                            <option>Canada</option>
+                                            <option>France</option>
+                                            <option>Germany</option>
+                                        </select>
                                     </li>
                                 </ul>
-                                <ul class="pro-input-label">
+                                <ul class="add-label-input">
                                     <li>
-                                        <label>Email address</label>
-                                        <input type="text" name="name" placeholder="Email address" required>
+                                        <label>City</label>
+                                        <select>
+                                            <option>Choose city</option>
+                                            <option>New york</option>
+                                            <option>Berlin</option>
+                                            <option>Geneve</option>
+                                        </select>
                                     </li>
                                     <li>
-                                        <label>Phone number</label>
-                                        <input type="text" name="name" placeholder="Phone number">
+                                        <label>ZIP code</label>
+                                        <input type="text" name="name" placeholder="ZIP code">
                                     </li>
                                 </ul>
-                                <ul class="pro-input-label">
+                                <ul class="add-label-input">
                                     <li>
-                                        <label>New password</label>
+                                        <label>Address 1</label>
                                         <input type="text" name="name" placeholder="New password">
                                     </li>
                                     <li>
-                                        <label>Confirm password</label>
+                                        <label>Address 2</label>
                                         <input type="text" name="name" placeholder="Confirm password">
                                     </li>
                                 </ul>
                                 <ul class="pro-submit">
                                     <li>
-                                        <input type="checkbox" name="name">
-                                        <label>Subscribe me to newsletter</label>
+                                        <input type="checkbox" name="--">
+                                        <label>Same as contact address</label>
                                     </li>
                                     <li>
-                                        <a href="profile.html" class="btn btn-style1">Update profile</a>
+                                        <a href="pro-wishlist.html" class="btn btn-style1">Update address</a>
                                     </li>
                                 </ul>
                             </form>

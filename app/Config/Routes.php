@@ -8,24 +8,43 @@ use CodeIgniter\Router\RouteCollection;
 $routes->setAutoRoute(true);
 // Frontend Routes
 $routes->get('/',                               'Frontend\Frontend_Controller::index');
-$routes->get('/logout',                         'Frontend\Frontend_Controller::logout');
-$routes->get('/login',                          'Frontend\Frontend_Controller::load_login');
-$routes->post('/login-action',                  'Frontend\Frontend_Controller::handle_login');
-$routes->get('/forgot-password',                'Frontend\Frontend_Controller::load_forgot_password');
-$routes->get('/sign-up',                        'Frontend\Frontend_Controller::load_signup');
-$routes->get('/sign-up-success',                'Frontend\Frontend_Controller::signup_success');
-$routes->post('/sign-up-action',                'Frontend\Frontend_Controller::handle_signup');
-$routes->get('/change-password',                'Frontend\Frontend_Controller::change_password');
-$routes->post('/change-password-action',        'Frontend\Frontend_Controller::handle_change_password');
-$routes->post('/send-otp',                      'Frontend\Frontend_Controller::send_otp');
-$routes->get('/verify-otp',                     'Frontend\Frontend_Controller::load_otp');
-$routes->post('/verify-otp-action',             'Frontend\Frontend_Controller::verify_otp');
+// $routes->get('/logout',                         'Frontend\Frontend_Controller::logout');
+// $routes->post('/login-action',                  'Frontend\Frontend_Controller::handle_login');
+// $routes->get('/forgot-password',                'Frontend\Frontend_Controller::load_forgot_password');
+// $routes->get('/sign-up-success',                'Frontend\Frontend_Controller::signup_success');
+// $routes->post('/sign-up-action',                'Frontend\Frontend_Controller::handle_signup');
+// $routes->get('/change-password',                'Frontend\Frontend_Controller::change_password');
+// $routes->post('/change-password-action',        'Frontend\Frontend_Controller::handle_change_password');
+// $routes->post('/send-otp',                      'Frontend\Frontend_Controller::send_otp');
+// $routes->get('/verify-otp',                     'Frontend\Frontend_Controller::load_otp');
+// $routes->post('/verify-otp-action',             'Frontend\Frontend_Controller::verify_otp');
 
+$routes->get('/sign-up',                        'Frontend\Frontend_Controller::load_signup');
+$routes->get('/login',                          'Frontend\Frontend_Controller::load_login');
 $routes->get('/about-us',                       'Frontend\Frontend_Controller::about_us');
 $routes->get('/account',                        'Frontend\Frontend_Controller::account');
 $routes->get('/address',                        'Frontend\Frontend_Controller::address');
 $routes->get('/contact-us',                     'Frontend\Frontend_Controller::contact_us');
-$routes->get('/product/details',                'Frontend\Frontend_Controller::product_details');
+$routes->get('/privacy/policy',                 'Frontend\Frontend_Controller::privacy_policy');
+$routes->get('/return/policy',                  'Frontend\Frontend_Controller::return_policy');
+$routes->get('/shipping/policy',                'Frontend\Frontend_Controller::shipping_policy');
+$routes->get('/terms/conditions',               'Frontend\Frontend_Controller::terms_conditions');
+$routes->get('/faq',                            'Frontend\Frontend_Controller::faq');
+$routes->get('/pro-address',                    'Frontend\Frontend_Controller::pro_address');
+
+$routes->get('/product/details',                'Frontend\Product_Controller::product_details');
+$routes->get('/product/list',                   'Frontend\Product_Controller::product_list');
+$routes->get('/cart',                           'Frontend\Product_Controller::cart');
+$routes->get('/wishlist',                       'Frontend\Product_Controller::wishlist');
+
+$routes->get('/checkout',                       'Frontend\Order_Controller::checkout');
+$routes->get('/billing/info',                   'Frontend\Order_Controller::billing_info');
+$routes->get('/cancellation',                   'Frontend\Order_Controller::cancellation');
+$routes->get('/order/history',                  'Frontend\Order_Controller::order_history');
+$routes->get('/payment/policy',                 'Frontend\Order_Controller::payment_policy');
+$routes->get('/order/tracking',                 'Frontend\Order_Controller::order_tracking');
+
+
 
 
 

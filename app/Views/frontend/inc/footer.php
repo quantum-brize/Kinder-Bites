@@ -40,9 +40,9 @@
                                         <i class="fa fa-angle-down"></i>
                                     </a>
                                     <ul class="f-link-ul collapse" id="t-cate" data-bs-parent="#footer-accordian">
-                                        <li class="f-link-ul-li"><a href="about-us.html">About us</a></li>
-                                        <li class="f-link-ul-li"><a href="faq's.html">Faq's</a></li>
-                                        <li class="f-link-ul-li"><a href="contact.html">Contact us</a></li>
+                                        <li class="f-link-ul-li"><a href="<?= base_url('about-us') ?>">About us</a></li>
+                                        <li class="f-link-ul-li"><a href="<?= base_url('faq') ?>">Faq's</a></li>
+                                        <li class="f-link-ul-li"><a href="<?= base_url('contact-us') ?>">Contact us</a></li>
                                     </ul>
                                 </li>
                                 <li class="footer-li footer-link">
@@ -52,11 +52,11 @@
                                         <i class="fa fa-angle-down"></i>
                                     </a>
                                     <ul class="f-link-ul collapse" id="privacy" data-bs-parent="#footer-accordian">
-                                        <li class="f-link-ul-li"><a href="payment-policy.html">Payment policy</a></li>
-                                        <li class="f-link-ul-li"><a href="privacy-policy.html">Privacy policy</a></li>
-                                        <li class="f-link-ul-li"><a href="return-policy.html">Return policy</a></li>
-                                        <li class="f-link-ul-li"><a href="shipping-policy.html">Shipping policy</a></li>
-                                        <li class="f-link-ul-li"><a href="terms-conditions.html">Terms & conditions</a></li>
+                                        <li class="f-link-ul-li"><a href="<?= base_url('payment/policy') ?>">Payment policy</a></li>
+                                        <li class="f-link-ul-li"><a href="<?= base_url('privacy/policy') ?>">Privacy policy</a></li>
+                                        <li class="f-link-ul-li"><a href="<?= base_url('return/policy') ?>">Return policy</a></li>
+                                        <li class="f-link-ul-li"><a href="<?= base_url('shipping/policy') ?>">Shipping policy</a></li>
+                                        <li class="f-link-ul-li"><a href="<?= base_url('terms/conditions') ?>">Terms & conditions</a></li>
                                     </ul>
                                 </li>
                                 <li class="footer-li footer-link">
@@ -66,11 +66,11 @@
                                         <i class="fa fa-angle-down"></i>
                                     </a>
                                     <ul class="f-link-ul collapse" id="services" data-bs-parent="#footer-accordian">
-                                        <li class="f-link-ul-li"><a href="account.html">My account</a></li>
-                                        <li class="f-link-ul-li"><a href="cart.html">My cart</a></li>
-                                        <li class="f-link-ul-li"><a href="order-history.html">Order history</a></li>
-                                        <li class="f-link-ul-li"><a href="wishlist.html">My wishlist</a></li>
-                                        <li class="f-link-ul-li"><a href="addresses.html">My address</a></li>
+                                        <li class="f-link-ul-li"><a href="<?= base_url('account') ?>">My account</a></li>
+                                        <li class="f-link-ul-li"><a href="<?= base_url('cart') ?>">My cart</a></li>
+                                        <li class="f-link-ul-li"><a href="<?= base_url('order/history') ?>">Order history</a></li>
+                                        <li class="f-link-ul-li"><a href="<?= base_url('wishlist') ?>">My wishlist</a></li>
+                                        <li class="f-link-ul-li"><a href="<?= base_url('address') ?>">My address</a></li>
                                     </ul>
                                 </li>
                                 <li class="footer-li store-info">

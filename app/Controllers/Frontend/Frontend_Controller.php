@@ -121,14 +121,14 @@ class Frontend_Controller extends Main_Controller
         $this->load_page('/frontend/contact_us',  $data);
     }
 
-    public function product_details(): void
+    public function privacy_policy(): void
     {
         $data = PAGE_DATA_FRONTEND;
             $data = [
                 'data_page' => [],
                 'data_header' => [
                     'header_link' => [],
-                    'title' => 'Product Details',
+                    'title' => 'Privacy Policy',
                     'header' => [],
                     'sidebar' => [],
                     'site' => 'frontend'
@@ -139,9 +139,124 @@ class Frontend_Controller extends Main_Controller
                     'site' => 'frontend'
                 ]
             ];
-        $this->load_page('/frontend/product_details',  $data);
+        $this->load_page('/frontend/privacy_policy',  $data);
     }
 
+    public function return_policy(): void
+    {
+        $data = PAGE_DATA_FRONTEND;
+            $data = [
+                'data_page' => [],
+                'data_header' => [
+                    'header_link' => [],
+                    'title' => 'Return Policy',
+                    'header' => [],
+                    'sidebar' => [],
+                    'site' => 'frontend'
+                ],
+                'data_footer' => [
+                    'footer_link' => [],
+                    'footer' => [],
+                    'site' => 'frontend'
+                ]
+            ];
+        $this->load_page('/frontend/return_policy',  $data);
+    }
+
+    public function shipping_policy(): void
+    {
+        $data = PAGE_DATA_FRONTEND;
+            $data = [
+                'data_page' => [],
+                'data_header' => [
+                    'header_link' => [],
+                    'title' => 'Shipping Policy',
+                    'header' => [],
+                    'sidebar' => [],
+                    'site' => 'frontend'
+                ],
+                'data_footer' => [
+                    'footer_link' => [],
+                    'footer' => [],
+                    'site' => 'frontend'
+                ]
+            ];
+        $this->load_page('/frontend/shipping_policy',  $data);
+    }
+
+    public function terms_conditions(): void
+    {
+        $data = PAGE_DATA_FRONTEND;
+            $data = [
+                'data_page' => [],
+                'data_header' => [
+                    'header_link' => [],
+                    'title' => 'Terms Conditions',
+                    'header' => [],
+                    'sidebar' => [],
+                    'site' => 'frontend'
+                ],
+                'data_footer' => [
+                    'footer_link' => [],
+                    'footer' => [],
+                    'site' => 'frontend'
+                ]
+            ];
+        $this->load_page('/frontend/terms_conditions',  $data);
+    }
+
+    public function faq(): void
+    {
+        $data = PAGE_DATA_FRONTEND;
+            $data = [
+                'data_page' => [],
+                'data_header' => [
+                    'header_link' => [],
+                    'title' => 'FAQ',
+                    'header' => [],
+                    'sidebar' => [],
+                    'site' => 'frontend'
+                ],
+                'data_footer' => [
+                    'footer_link' => [],
+                    'footer' => [],
+                    'site' => 'frontend'
+                ]
+            ];
+        $this->load_page('/frontend/faq',  $data);
+    }
+
+    public function pro_address(): void
+    {
+        $data = PAGE_DATA_FRONTEND;
+            $data = [
+                'data_page' => [],
+                'data_header' => [
+                    'header_link' => [],
+                    'title' => 'Pro Address',
+                    'header' => [],
+                    'sidebar' => [],
+                    'site' => 'frontend'
+                ],
+                'data_footer' => [
+                    'footer_link' => [],
+                    'footer' => [],
+                    'site' => 'frontend'
+                ]
+            ];
+        $this->load_page('/frontend/pro_address',  $data);
+    }
+
+    public function load_signup(): void
+    {
+        echo view('/frontend/register');
+    }
+
+    public function load_login()
+    {
+        echo view('frontend/login');
+    }
+   
 
     public function logout()
     {
@@ -152,14 +267,7 @@ class Frontend_Controller extends Main_Controller
         return redirect()->to('login');
     }
 
-    public function load_login()
-    {
-        echo view('frontend/login');
-    }
-    public function load_signup()
-    {
-        echo view('frontend/signup');
-    }
+    
 
     public function load_otp()
     {

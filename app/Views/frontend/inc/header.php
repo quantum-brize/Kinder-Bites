@@ -33,7 +33,7 @@
                                 <!-- contact number end -->
                                 <!-- logo start -->
                                 <div class="header-element logo">
-                                    <a href="index.html">
+                                    <a href="<?= base_url('/') ?>">
                                         <!-- <img  alt="Kinder Bites" class="img-fluid">-->
                                         <h1>Kinder Bites</h1>
                                     </a>
@@ -60,7 +60,7 @@
                                             </a>
                                         </li>
                                         <li class="side-wrap user-wrap">
-                                            <a href="wishlist-empty.html" class="wishlist">
+                                            <a href="<?= base_url('wishlist') ?>" class="wishlist">
                                                 <span class="icon">
                                                     <i class="icon-heart"></i>
                                                     <span class="bigcounter">5</span>
@@ -173,7 +173,7 @@
                                                 </li>
                                                 
                                                 <li class="menu-link parent">
-                                                    <a href="javascript:void(0)" class="link-title">
+                                                    <a href="<?= base_url('contact-us') ?>" class="link-title">
                                                         <span class="sp-link-title">Contact us</span>
                                                     </a>
                                                 </li>
@@ -411,8 +411,8 @@
                     </li>
                     <li class="mini-cart-btns">
                         <div class="cart-btns">
-                            <a href="cart-2.html" class="btn btn-style2">View cart</a>
-                            <a href="checkout-2.html" class="btn btn-style2">Checkout</a>
+                            <a href="<?= base_url('cart') ?>" class="btn btn-style2">View cart</a>
+                            <a href="<?= base_url('checkout') ?>" class="btn btn-style2">Checkout</a>
                         </div>
                     </li>
                 </ul>

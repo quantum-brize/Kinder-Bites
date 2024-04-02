@@ -29,6 +29,8 @@
         <!-- animation -->
         <link rel="stylesheet" type="text/css" href="<?= base_url()?>public/assets/css/animate.css">
         <!-- style -->
+        <link rel="stylesheet" type="text/css" href="<?= base_url()?>public/assets/css/style.css">
+        <link rel="stylesheet" type="text/css" href="<?= base_url()?>public/assets/css/responsive.css">
         <link rel="stylesheet" type="text/css" href="<?= base_url()?>public/assets/css/style14.css">
         <link rel="stylesheet" type="text/css" href="<?= base_url()?>public/assets/css/responsive14.css">
 
