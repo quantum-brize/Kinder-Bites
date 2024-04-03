@@ -109,7 +109,7 @@ class User_Controller extends Api_Controller
                 ->getResultArray();
                 $UserImageData = !empty($UsersData[0]) ? $UsersData[0] : null;
                 foreach ($uploadedFiles['images'] as $file) {
-                    $file_src = 'public\uploads\user_images/'.$this->single_upload($file, PATH_USER_IMG);
+                    $file_src = $this->single_upload($file, PATH_USER_IMG);
                     $UserImagesModel->transStart();
                     try {
                         if(!empty($UserImageData)){
@@ -287,6 +287,100 @@ class User_Controller extends Api_Controller
         return $resp; 
     }
 
+    private function customer($user_id)
+    {
+        // echo $user_id;
+        $resp = [
+            "status" => false,
+            "message" => "Data Not Found",
+            "user_data" => ""
+        ];
+        if(!empty($user_id)){
+            $UsersModel = new UsersModel();
+            $UsersData = $UsersModel
+            ->where('uid', $user_id)
+            ->get()
+            ->getResultArray();
+            $UsersData = !empty($UsersData[0]) ? $UsersData[0] : null;
+
+            $UserAddressModel = new AddressModel();
+            $AddressData = $UserAddressModel
+            ->where('user_id', $user_id)
+            ->get()
+            ->getResultArray();
+            $AddressData = !empty($AddressData[0]) ? $AddressData[0] : null;
+
+            $AllAddressData = $UserAddressModel
+            ->where('user_id', $user_id)
+            ->get()
+            ->getResultArray();
+            $AllAddressData = !empty($AllAddressData) ? $AllAddressData : null;
+
+            $UserImageModel = new UserImageModel();
+            $ImageData = $UserImageModel
+            ->where('user_id', $user_id)
+            ->get()
+            ->getResultArray();
+            $ImageData = !empty($ImageData[0]) ? $ImageData[0] : null;
+            $resp = [
+                "status" => true,
+                "message" => "Data fetched",
+                "user_id" => $user_id,
+                "user_data" => $UsersData,
+                "address" => $AddressData,
+                "user_img" => $ImageData,
+                "all_address" => $AllAddressData,
+            ];
+        }else{
+            $UsersModel = new UsersModel();
+            $users = $UsersModel->where('type', 'user')->findAll();
+            if(count($users) > 0){
+                $UserImageModel = new UserImageModel();
+                foreach($users as $index => $user){
+                    $img = $UserImageModel->where('user_id', $user['uid'])->first();
+                    $users[$index]['user_img'] = $img;
+                }
+
+            }
+            $resp = [
+                "status" => true,
+                "message" => "Data fetched",
+                "user_data" => $users,
+            ];
+        }
+        return $resp; 
+    }
+
+    private function delete_customer($data)
+    {
+        // echo $user_id;
+        $resp = [
+            "status" => false,
+            "message" => "Data Not Found",
+            "user_data" => ""
+        ];
+        if($data){
+            $UserModel = new UsersModel();
+            $UserModel->transStart();
+            try {
+                $UserModel
+                        ->where('uid', $data['user_id'])
+                        ->set(['status' => 'deleted'])
+                        ->update();
+                $UserModel->transCommit();
+            } catch (\Exception $e) {
+                $UserModel->transRollback();
+                throw $e;
+            }
+            $resp = [
+                "status" => true,
+                "message" => "Data Deleted",
+                "user_data" => ""
+            ];
+        }
+        return $resp; 
+    }
+
     public function POST_update_user()
     {
         $data = $this->request->getPost();
@@ -313,8 +407,24 @@ class User_Controller extends Api_Controller
 
     public function GET_get_user()
     {
-        $data = $this->request->getPost();
-        $resp = $this->get_user($data);
+        
+        $resp = $this->get_user();
+        return $this->response->setJSON($resp);
+
+    }
+
+    public function GET_customer()
+    {
+        $data = $this->request->getGet();
+        $resp = $this->customer($data);
+        return $this->response->setJSON($resp);
+
+    }
+
+    public function GET_delete_customer()
+    {
+        $data = $this->request->getGet();
+        $resp = $this->delete_customer($data);
         return $this->response->setJSON($resp);
 
     }

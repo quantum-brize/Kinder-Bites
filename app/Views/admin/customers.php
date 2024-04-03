@@ -86,22 +86,23 @@
                                         <div class="table-responsive table-card mb-1">
                                             <table class="table align-middle" id="customerTable">
                                                 <thead class="table-light text-muted">
-                                                    <tr>
+                                                    <!-- <tr>
                                                         <th scope="col" style="width: 50px;">
                                                             <div class="form-check">
                                                                 <input class="form-check-input" type="checkbox" id="checkAll" value="option">
                                                             </div>
                                                         </th>
 
+                                                        <th class="sort" data-sort="customer_image">Image</th>
                                                         <th class="sort" data-sort="customer_name">Customer</th>
-                                                        <th class="sort" data-sort="email">Email</th>
                                                         <th class="sort" data-sort="phone">Phone</th>
+                                                        <th class="sort" data-sort="email">Email</th>
                                                         <th class="sort" data-sort="date">Joining Date</th>
                                                         <th class="sort" data-sort="status">Status</th>
                                                         <th class="sort" data-sort="action">Action</th>
-                                                    </tr>
+                                                    </tr> -->
                                                 </thead>
-                                                <tbody class="list form-check-all">
+                                                <tbody class="list form-check-all" id="table_data">
                                                     <tr>
                                                         <th scope="row">
                                                             <div class="form-check">
@@ -230,7 +231,7 @@
                                                     </div>
                                                     <div class="d-flex gap-2 justify-content-center mt-4 mb-2">
                                                         <button type="button" class="btn w-sm btn-light" data-bs-dismiss="modal">Close</button>
-                                                        <button type="button" class="btn w-sm btn-danger" id="delete-record">Yes, Delete It!</button>
+                                                        <button type="button" class="btn w-sm btn-danger" onclick="delet_customer()" id="delete-record">Yes, Delete It!</button>
                                                     </div>
                                                 </div>
                                             </div>

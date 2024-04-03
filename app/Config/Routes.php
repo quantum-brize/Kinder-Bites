@@ -8,16 +8,16 @@ use CodeIgniter\Router\RouteCollection;
 $routes->setAutoRoute(true);
 // Frontend Routes
 $routes->get('/',                               'Frontend\Frontend_Controller::index');
-// $routes->get('/logout',                         'Frontend\Frontend_Controller::logout');
-// $routes->post('/login-action',                  'Frontend\Frontend_Controller::handle_login');
+$routes->get('/logout',                         'Frontend\Frontend_Controller::logout');
+$routes->post('/login-action',                  'Frontend\Frontend_Controller::handle_login');
 // $routes->get('/forgot-password',                'Frontend\Frontend_Controller::load_forgot_password');
-// $routes->get('/sign-up-success',                'Frontend\Frontend_Controller::signup_success');
-// $routes->post('/sign-up-action',                'Frontend\Frontend_Controller::handle_signup');
+$routes->get('/sign-up-success',                'Frontend\Frontend_Controller::signup_success');
+$routes->post('/sign-up-action',                'Frontend\Frontend_Controller::handle_signup');
 // $routes->get('/change-password',                'Frontend\Frontend_Controller::change_password');
 // $routes->post('/change-password-action',        'Frontend\Frontend_Controller::handle_change_password');
 // $routes->post('/send-otp',                      'Frontend\Frontend_Controller::send_otp');
-// $routes->get('/verify-otp',                     'Frontend\Frontend_Controller::load_otp');
-// $routes->post('/verify-otp-action',             'Frontend\Frontend_Controller::verify_otp');
+$routes->get('/verify-otp',                     'Frontend\Frontend_Controller::load_otp');
+$routes->post('/verify-otp-action',             'Frontend\Frontend_Controller::verify_otp');
 
 $routes->get('/sign-up',                        'Frontend\Frontend_Controller::load_signup');
 $routes->get('/login',                          'Frontend\Frontend_Controller::load_login');
@@ -64,6 +64,12 @@ $routes->get('/admin/product/variant/add',      'Admin\Product_Controller::load_
 $routes->get('/admin/orders',                   'Admin\Orders_Controller::index');
 $routes->get('/admin/users/customers',          'Admin\User_Controller::load_customer');
 $routes->get('/admin/users/vendors',            'Admin\User_Controller::load_vendor');
+$routes->get('/admin/banners',                  'Admin\Admin_Controller::banner');
+$routes->get('/admin/banners/add',              'Admin\Admin_Controller::banners_add');
+$routes->get('/admin/banners/update',           'Admin\Admin_Controller::banners_update');
+$routes->get('/admin/promotion-card',           'Admin\Admin_Controller::promotion_card');
+$routes->get('/admin/discounts/add',            'Admin\Admin_Controller::discounts_add');
+$routes->get('/admin/discounts',                'Admin\Admin_Controller::discounts_list');
 
 
 
@@ -92,6 +98,18 @@ $routes->post('/api/user/cart/add',                 'Api\Cart_Controller::POST_c
 $routes->get('/api/user/cart/remove',               'Api\Cart_Controller::GET_cart_remove');
 $routes->get('/api/user/cart/empty',                'Api\Cart_Controller::GET_cart_empty');
 $routes->get('/api/user/id',                        'Api\Product_Controller::GET_user_id');
+$routes->post('/api/banner/add',                    'Api\Banner_Controller::POST_add_banner');
+$routes->get('/api/banners',                        'Api\Banner_Controller::GET_banners');
+$routes->get('/api/banner/delete',                  'Api\Banner_Controller::GET_delete_banner');
+$routes->get('/api/banner/update',                  'Api\Banner_Controller::GET_update_banner');
+$routes->post('/api/update/banner',                 'Api\Banner_Controller::POST_banner_update');
+$routes->get('/api/promotion-card/update',          'Api\Banner_Controller::POST_update_promotion_card');
+$routes->post('/api/update/promotion-card',         'Api\Banner_Controller::POST_promotion_card_update');
+$routes->get('/api/customers',                      'Api\User_Controller::GET_customer');
+$routes->get('/api/delete/customer',                'Api\User_Controller::GET_delete_customer');
+$routes->get('/api/discounts',                      'Api\Product_Controller::GET_discounts_all');
+$routes->get('/api/discounts/delete',               'Api\Product_Controller::GET_discounts_delete');
+$routes->post('/api/discounts/add',                 'Api\Product_Controller::POST_discounts_add');
 
 
 

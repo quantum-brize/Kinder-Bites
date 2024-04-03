@@ -39,6 +39,7 @@
                                     <li class="profile-li"><a href="<?= base_url('pro-address') ?>">Address</a></li>
                                     <li class="profile-li"><a href="<?= base_url('wishlist') ?>"><span>Wishlist</span> <span class="pro-count">3</span></a></li>
                                     <li class="profile-li"><a href="pro-tickets.html"><span>My tickets</span> <span class="pro-count">4</span></a></li>
+                                    <li class="profile-li"><a href="<?=base_url('logout')?>"><span>Logout</span></a></li>
                                 </ul>
                             </div>
                         </div>

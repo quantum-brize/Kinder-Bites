@@ -33,6 +33,11 @@
         <link rel="stylesheet" type="text/css" href="<?= base_url()?>public/assets/css/responsive.css">
         <link rel="stylesheet" type="text/css" href="<?= base_url()?>public/assets/css/style14.css">
         <link rel="stylesheet" type="text/css" href="<?= base_url()?>public/assets/css/responsive14.css">
+        <!-- jquery -->
+        <script src="<?= base_url()?>public/assets/js/modernizr-2.8.3.min.js"></script>
+        <script src="<?= base_url()?>public/assets/js/jquery-3.6.0.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
 
         <?php
     if (!empty($header_asset_link)) {
@@ -47,3 +52,5 @@
         }
     }
     ?>
+
+    

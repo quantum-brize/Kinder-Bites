@@ -2,8 +2,8 @@
 <section class="main-slider">
             <div class="slider-area">
                 <div class="swiper-container" id="home-slider-14">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
+                    <div class="swiper-wrapper" id="banner_img">
+                        <!-- <div class="swiper-slide">
                             <div class="slider-block">
                                 <a href="grid-list.html">
                                     <img src="<?= base_url()?>public/assets/image/home-14/slider2.png" class="img-fluid" alt="image">
@@ -36,7 +36,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
                 <div class="swiper-buttons">

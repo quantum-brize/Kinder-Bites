@@ -36,7 +36,7 @@
 </head>
 <body class="home-1">
     <!-- top notificationbar start -->
-    <section class="top-notification-area">
+    <!-- <section class="top-notification-area">
         <div class="container">
             <div class="row ">
                 <div class="col">
@@ -49,32 +49,26 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
     <!-- top notificationbar start -->
     <!-- header start -->
-    <header class="header-area">
+    <!-- <header class="header-area">
         <div class="header-main-area">
             <div class="container">
                 <div class="row">
                     <div class="col">
                         <div class="header-main">
-                            <!-- contact number start -->
                             <div class="header-element contact-area">
                                 <a href="tel:(+14) 123 456 7890" class="call-text">
                                     <span class="icon"><i class="ti-headphone"></i></span>
                                     <span class="text">(+91) 9123325003</span>
                                 </a>
                             </div>
-                            <!-- contact number end -->
-                            <!-- logo start -->
                             <div class="header-element logo">
                                 <a href="index.html">
-                                    <!-- <img  alt="Kinder Bites" class="img-fluid">-->
                                     <h1>Kinder Bites</h1>
                                 </a>
                             </div>
-                            <!-- logo end -->
-                            <!-- header icon start -->
                             <div class="header-element right-block-box">
                                 <ul class="shop-element">
                                     <li class="side-wrap nav-toggler">
@@ -116,11 +110,9 @@
                                     </li>
                                 </ul>
                             </div>
-                            <!-- header icon end -->
                         </div>
                         <div class="top-menubar">
                             <div class="menu-slider">
-                                <!-- main menu start -->
                                 <div class="megamenu-content">
                                     <div class="mainwrap">
                                         <ul class="main-menu">
@@ -215,8 +207,6 @@
                                         </ul>
                                     </div>
                                 </div>
-                                <!-- main menu end -->
-                                <!-- search start -->
                                 <div class="header-search">
                                     <div class="search-area">
                                         <form>
@@ -225,14 +215,12 @@
                                         </form>
                                     </div>
                                 </div>
-                                <!-- search end -->
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- mobile menu start -->
         <div class="header-bottom-area">
             <div class="container">
                 <div class="row">
@@ -348,8 +336,6 @@
                 </div>
             </div>
         </div>
-        <!-- mobile menu end -->
-        <!-- minicart start -->
         <div class="mini-cart">
             <a href="javascript:void(0)" class="shopping-cart-close"><i class="ion-close-round"></i></a>
             <div class="cart-item-title">
@@ -452,8 +438,6 @@
                 </li>
             </ul>
         </div>
-        <!-- minicart end -->
-        <!-- search start -->
         <div class="modal fade" id="search-modal">
             <div class="modal-dialog">
                 <div class="modal-content">
@@ -475,12 +459,11 @@
                 </div>
             </div>
         </div>
-        <!-- search end -->
-    </header>
+    </header> -->
     <!-- header end -->
         
     <!-- breadcrumb start -->
-    <section class="about-breadcrumb">
+    <!-- <section class="about-breadcrumb">
         <div class="about-back section-tb-padding" style="background-image: url(<?= base_url()?>public/assets/image/about-image.jpg)">
             <div class="container">
                 <div class="row">
@@ -495,7 +478,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
     <!-- breadcrumb end -->
     <!-- login start -->
     <section class="section-tb-padding">
@@ -508,10 +491,10 @@
                             <p>Please login below account detail</p>
                             <form>
                                 <label>Email address</label>
-                                <input type="text" name="email" placeholder="Email address">
+                                <input type="text" name="email" id="email_number" placeholder="Email address">
                                 <label>Password</label>
-                                <input type="text" name="password" placeholder="Password">
-                                <a href="login.html" class="btn-style1">Sign in</a>
+                                <input type="text" name="password" id="password-input" placeholder="Password">
+                                <button id="sign-in-btn" class=" w-100 btn-style1">Sign in</button>
                                 <a href="forgot-password.html" class="re-password">Forgot your password?</a>
                             </form>
                         </div>
@@ -530,7 +513,7 @@
     </section>
     <!-- login end -->
         <!-- footer start -->
-        <section class="footer-one section-tb-padding" style="background-color: #f5f5f5;">
+        <!-- <section class="footer-one section-tb-padding" style="background-color: #f5f5f5;">
             <div class="container">
                 <div class="row">
                     <div class="col">
@@ -539,7 +522,6 @@
                                 <li class="footer-li logo-info">
                                     <div class="logo-desc">
                                         <a href="index.html">
-                                           <!-- <img  alt="Kinder Bites" class="img-fluid">-->
                                             <h1>Kinder Bites</h1>
                                         </a>
                                     </div>
@@ -630,11 +612,11 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
         <!-- footer end -->
 
         <!-- copyright start -->
-        <section class="footer-copyright">
+        <!-- <section class="footer-copyright">
             <div class="container">
                 <div class="row">
                     <div class="col">
@@ -663,7 +645,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
         <!-- copyright end -->
     <!-- back to top start -->
     <a href="javascript:void(0)" class="scroll" id="top">
@@ -686,5 +668,116 @@
     <script src="<?= base_url()?>public/assets/js/swiper.min.js"></script>
     <!-- custom -->
     <script src="<?= base_url()?>public/assets/js/custom.js"></script>
+
+    <script>
+        $(document).ready(function () {
+
+
+            $('#sign-in-btn').on('click', function (event) {
+                event.preventDefault();
+                let email_number = $('#email_number').val();
+                let password = $('#password-input').val();
+
+                $.ajax({
+                    url: "<?= base_url('login-action') ?>",
+                    type: 'POST',
+                    data: {
+                        email_number: email_number,
+                        password: password,
+                    },
+                    beforeSend: function () {
+                        $('#sign-in-btn').html(`<div class="spinner-border text-light" role="status">
+                                                    <span class="sr-only">Loading...</span>
+                                                </div>`)
+                        $('#sign-in-btn').attr('disabled', true);
+                    },
+                    success: function (resp) {
+                        resp = JSON.parse(resp)
+                        if (resp.status == true) {
+                            $('#alert').html(`<div class="alert alert-success alert-dismissible alert-label-icon label-arrow fade show material-shadow" role="alert">
+                                                        <i class="ri-checkbox-circle-fill label-icon"></i><strong>${resp.message}</strong>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                                    </div>`) 
+
+                            // var storedData = localStorage.getItem('cartData');
+                            // var retrievedData = JSON.parse(storedData);
+                            // if(retrievedData != ""){
+                            //     $.ajax({
+                            //         url: "<?= base_url('/api/user/id') ?>",
+                            //         type: "GET",
+                            //         success: function (resp) {
+                                        
+                            //             if (resp.status) {
+                            //                 $.each(retrievedData, function(index, cart) {
+                            //                     $.ajax({
+                            //                         url: "<?= base_url('/api/user/cart/add') ?>",
+                            //                         type: "POST",
+                            //                         data:{product_id:cart.product_id, 
+                            //                             user_id:resp.data,
+                            //                             variation_id:cart.variation_id,
+                            //                             qty:cart.qty,
+                            //                             },
+                            //                         success: function (resp) {
+                                                        
+                            //                             if (resp.status) {
+                            //                                 var updatedData = retrievedData.filter(function(item) {
+                            //                                     item.product_id !== cart.product_id;
+                            //                                 });
+                            //                                 var updatedDataJSON = JSON.stringify(updatedData);
+                            //                                 localStorage.setItem('cartData', updatedDataJSON);
+                            //                             } else {
+                            //                                 console.log(resp)
+                                                           
+                            //                             }
+                                                        
+                            //                         },
+                            //                         error: function (err) {
+                            //                             console.log(err)
+                            //                         },
+                            //                     })
+                            //                 })
+                                                
+                                            
+                            //             } else {
+                                            
+                            //             }
+                            //         },
+                            //         error: function (err) {
+                            //             console.log(err)
+                            //         },
+                            //     })
+                                
+                            // }
+
+                            window.location.href = `<?= base_url()?>`;
+                        } else {
+                            $('#alert').html(`<div class="alert alert-warning alert-dismissible alert-label-icon label-arrow fade show material-shadow" role="alert">
+                                                    <i class="ri-alert-line label-icon"></i><strong> ${resp.message}</strong>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                                </div>`)
+                        }
+                        $('#sign-in-btn').html(`Sign In`)
+                        $('#sign-in-btn').attr('disabled', false);
+                    },
+                    complete: function () {
+                        $('#sign-in-btn').html(`Sign In`)
+                        $('#sign-in-btn').attr('disabled', false);
+                    },
+                    error: function () {
+                        $('#sign-in-btn').html(`Sign In`)
+                        $('#sign-in-btn').attr('disabled', false);
+                        $('#alert').html(`<div class="alert alert-warning alert-dismissible alert-label-icon label-arrow fade show material-shadow" role="alert">
+                                                    <i class="ri-alert-line label-icon"></i><strong>Warning</strong> - Internal Server Error
+                                                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                                </div>`)
+                    }
+                })
+
+            })
+
+        })
+
+
+    </script>
 </body>
 </html>

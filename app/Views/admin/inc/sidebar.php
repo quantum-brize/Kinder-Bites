@@ -87,6 +87,40 @@
                     </a>
                 </li>
 
+                <li class="nav-item">
+                    <a class="nav-link menu-link <?= isset($sidebar['banners']) ? 'active' : '' ?>" 
+                        href="#sidebarBanner" 
+                        data-bs-toggle="collapse" 
+                        role="button"
+                        aria-expanded="<?= isset($sidebar['banners']) ? 'true' : 'false' ?>" 
+                        aria-controls="sidebarBanner">
+                        <i class="ri-archive-line"></i> 
+                        <span>Banners</span>
+                    </a>
+                    <div class="<?= isset($sidebar['banners']) ? '' : 'collapse' ?> menu-dropdown" id="sidebarBanner">
+                        <ul class="nav nav-sm flex-column">
+                            <li class="nav-item">
+                                <a href="<?=base_url('/admin/banners')?>" class="nav-link"> 
+                                    All Banner
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="<?=base_url('/admin/banners/add')?>" class="nav-link">
+                                    Add Banner
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </li> 
+
+                <li class="nav-item ">
+                    <a class="nav-link menu-link <?= isset($sidebar['promotion_card']) ? 'active' : '' ?>"
+                        href="<?=base_url('admin/promotion-card') ?>">
+                        <i class="bx bx-category"></i> <span data-key="t-widgets">Promotion Card</span>
+                    </a>
+                </li>
+
                 <li class="nav-item ">
                     <a class="nav-link menu-link <?= isset($sidebar['categories']) ? 'active' : '' ?>"
                         href="<?=base_url('admin/categories') ?>">
@@ -128,6 +162,12 @@
                     </a>
                 </li>
 
+                <li class="nav-item ">
+                    <a class="nav-link menu-link <?= isset($sidebar['discounts']) ? 'active' : '' ?>"
+                        href="<?=base_url('admin/discounts') ?>">
+                        <i class="ri ri-price-tag-line"></i> <span data-key="t-widgets">Discounts</span>
+                    </a>
+                </li>
 
                 <li class="nav-item">
                     <a class="nav-link menu-link <?= isset($sidebar['users']) ? 'active' : '' ?>" 

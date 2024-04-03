@@ -132,39 +132,48 @@ defined('BASE_URL') || define('BASE_URL', 'http://localhost/Kinder-Bites' );
 defined('DB_TEST_hostname') || define('DB_TEST_hostname', '103.92.235.18');
 defined('DB_TEST_username') || define('DB_TEST_username', 'jungleef');
 defined('DB_TEST_password') || define('DB_TEST_password', 'Y-eCdY3Jts5#');
-defined('DB_TEST_database') || define('DB_TEST_database', 'jungleef_DEV_daltonusstore');
+defined('DB_TEST_database') || define('DB_TEST_database', 'jungleef_kinder_bites');
 defined('DB_TEST_DBDriver') || define('DB_TEST_DBDriver', 'MySQLi');
 
 //////////////////////////////////////////////__TABLE
-defined('TABLE_USERS')              || define('TABLE_USERS', 'users');
-defined('TABLE_OTP')                || define('TABLE_OTP', 'otp');
-defined('TABLE_CATEGORIES')         || define('TABLE_CATEGORIES', 'categories');
-defined('TABLE_PRODUCT')            || define('TABLE_PRODUCT', 'product');
-defined('TABLE_PRODUCT_METADETALS') || define('TABLE_PRODUCT_METADETALS', 'product_meta_detalis');
-defined('TABLE_PRODUCT_ITEM')       || define('TABLE_PRODUCT_ITEM', 'product_item');
-defined('TABLE_PRODUCT_CONFIG')     || define('TABLE_PRODUCT_CONFIG', 'product_config');
-defined('TABLE_PRODUCT_IMAGE')      || define('TABLE_PRODUCT_IMAGE', 'product_images');
-defined('TABLE_VARIATION')          || define('TABLE_VARIATION', 'variation');
-defined('TABLE_VARIATION_OPTION')   || define('TABLE_VARIATION_OPTION', 'variation_option');
-defined('TABLE_VENDOR')             || define('TABLE_VENDOR', 'vendor');
-defined('TABLE_VARIANT_IMG')        || define('TABLE_VARIANT_IMG', 'variation_Images');
-defined('TABLE_CART')               || define('TABLE_CART','user_cart');
+defined('TABLE_USERS')              || define('TABLE_USERS',                'users');
+defined('TABLE_OTP')                || define('TABLE_OTP',                  'otp');
+defined('TABLE_CATEGORIES')         || define('TABLE_CATEGORIES',           'categories');
+defined('TABLE_PRODUCT')            || define('TABLE_PRODUCT',              'product');
+defined('TABLE_PRODUCT_METADETALS') || define('TABLE_PRODUCT_METADETALS',   'product_meta_detalis');
+defined('TABLE_PRODUCT_ITEM')       || define('TABLE_PRODUCT_ITEM',         'product_item');
+defined('TABLE_PRODUCT_CONFIG')     || define('TABLE_PRODUCT_CONFIG',       'product_config');
+defined('TABLE_PRODUCT_IMAGE')      || define('TABLE_PRODUCT_IMAGE',        'product_images');
+defined('TABLE_VARIATION')          || define('TABLE_VARIATION',            'variation');
+defined('TABLE_VARIATION_OPTION')   || define('TABLE_VARIATION_OPTION',     'variation_option');
+defined('TABLE_VENDOR')             || define('TABLE_VENDOR',               'vendor');
+defined('TABLE_VARIANT_IMG')        || define('TABLE_VARIANT_IMG',          'variation_Images');
+defined('TABLE_CART')               || define('TABLE_CART',                 'user_cart');
+defined('TABLE_DISCOUNTS')          || define('TABLE_DISCOUNTS',            'discounts');
+defined('TABLE_ORDERS')             || define('TABLE_ORDERS',               'orders');
+defined('TABLE_ORDERS_ITEMS')       || define('TABLE_ORDERS_ITEMS',         'order_items');
+defined('TABLE_PAYMENTS')           || define('TABLE_PAYMENTS',             'payments');
 
 //////////////////////////////////////////////__UID_PRIFIX
-defined('UID_USER')         || define('UID_USER', 'USR');
-defined('UID_OTP')          || define('UID_OTP', 'OTP');
-defined('UID_CATEGORY')     || define('UID_CATEGORY', 'CAT');
-defined('UID_PRODUCT')      || define('UID_PRODUCT', 'PRO');
-defined('UID_PRODUCT_ITEM') || define('UID_PRODUCT_ITEM', 'PRI');
-defined('UID_PRODUCT_META') || define('UID_PRODUCT_META', 'PRM');
-defined('UID_PRODUCT_IMG')  || define('UID_PRODUCT_IMG', 'PRG');
-defined('UID_ADDRESS')      || define('UID_ADDRESS', 'ADRS');
-defined('UID_USER_IMG')     || define('UID_USER_IMG', 'UIMG');
-defined('UID_MESSAGE')      || define('UID_MESSAGE', 'MSG');
-defined('UID_VAR_OPT')      || define('UID_VAR_OPT', 'VRO');
-defined('UID_VAR_IMG')      || define('UID_VAR_IMG', 'VRI');
-defined('UID_PRO_CONFIG')   || define('UID_PRO_CONFIG', 'PCON');
-defined('UID_CART')         || define('UID_CART', 'CRT');
+defined('UID_USER')                 || define('UID_USER',           'USR');
+defined('UID_OTP')                  || define('UID_OTP',            'OTP');
+defined('UID_CATEGORY')             || define('UID_CATEGORY',       'CAT');
+defined('UID_PRODUCT')              || define('UID_PRODUCT',        'PRO');
+defined('UID_PRODUCT_ITEM')         || define('UID_PRODUCT_ITEM',   'PRI');
+defined('UID_PRODUCT_META')         || define('UID_PRODUCT_META',   'PRM');
+defined('UID_PRODUCT_IMG')          || define('UID_PRODUCT_IMG',    'PRG');
+defined('UID_ADDRESS')              || define('UID_ADDRESS',        'ADRS');
+defined('UID_USER_IMG')             || define('UID_USER_IMG',       'UIMG');
+defined('UID_MESSAGE')              || define('UID_MESSAGE',        'MSG');
+defined('UID_VAR_OPT')              || define('UID_VAR_OPT',        'VRO');
+defined('UID_VAR_IMG')              || define('UID_VAR_IMG',        'VRI');
+defined('UID_PRO_CONFIG')           || define('UID_PRO_CONFIG',     'PCON');
+defined('UID_CART')                 || define('UID_CART',           'CRT');
+defined('UID_BANNER')               || define('UID_BANNER',         'BNR');
+defined('UID_DISCOUNTS')            || define('UID_DISCOUNTS',      'DIS');
+defined('UID_ORDERS')               || define('UID_ORDERS',         'ORD');
+defined('UID_ORDERS_ITEMS')         || define('UID_ORDERS_ITEMS',   'ORDI');
+defined('UID_PAYMENTS')             || define('UID_PAYMENTS',       'PAY');
 
 
 //////////////////////////////////////////////__STATUS
@@ -190,6 +199,8 @@ defined('SES_ADMIN_TYPE')    || define('SES_ADMIN_TYPE', 'ADMIN_user_type');
 defined('PATH_PRODUCT_IMG')  || define('PATH_PRODUCT_IMG', WRITEPATH  . 'uploads/product_images');
 defined('PATH_VARIANT_IMG')  || define('PATH_VARIANT_IMG', WRITEPATH  . 'uploads/variant_images');
 defined('PATH_USER_IMG')     || define('PATH_USER_IMG', WRITEPATH  . 'uploads/user_images');
+defined('PATH_BANNER_IMG')          || define('PATH_BANNER_IMG', ROOTPATH  . 'public/uploads/banner_images');
+defined('PATH_PROMOTION_CARD_IMG')  || define('PATH_PROMOTION_CARD_IMG', ROOTPATH  . 'public/uploads/promotion_card_images');
 
 
 //////////////////////////////////////////////__PAGEDATA
