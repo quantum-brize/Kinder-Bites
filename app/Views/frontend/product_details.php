@@ -172,7 +172,7 @@
                                 </div>
                                 <div class="pay-img">
                                     <a href="checkout-1.html">
-                                        <img src="image/pay-image.jpg" class="img-fluid" alt="pay-image">
+                                        <img src="<?= base_url()?>public/assets/image/pay-image.jpg" class="img-fluid" alt="pay-image">
                                     </a>
                                 </div>
                             </div>

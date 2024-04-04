@@ -10,7 +10,7 @@ $routes->setAutoRoute(true);
 $routes->get('/',                               'Frontend\Frontend_Controller::index');
 $routes->get('/logout',                         'Frontend\Frontend_Controller::logout');
 $routes->post('/login-action',                  'Frontend\Frontend_Controller::handle_login');
-// $routes->get('/forgot-password',                'Frontend\Frontend_Controller::load_forgot_password');
+$routes->get('/forgot-password',                'Frontend\Frontend_Controller::load_forgot_password');
 $routes->get('/sign-up-success',                'Frontend\Frontend_Controller::signup_success');
 $routes->post('/sign-up-action',                'Frontend\Frontend_Controller::handle_signup');
 // $routes->get('/change-password',                'Frontend\Frontend_Controller::change_password');
