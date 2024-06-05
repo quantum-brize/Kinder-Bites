@@ -1,8 +1,4 @@
-# CodeIgniter 4 Boilerplate by SK Rohan
-
-This is a CodeIgniter 4 boilerplate created by SK Rohan, providing a solid foundation for building web applications using the CodeIgniter 4 framework.
-
-## Features
+# Features
 
 - CodeIgniter 4: The latest version of the CodeIgniter PHP framework.
 - [Composer](https://getcomposer.org/): Dependency manager for PHP.
